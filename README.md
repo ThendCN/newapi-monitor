@@ -1,63 +1,63 @@
-# NewAPI Monitor (Win11 Desktop Widget)
+# NewAPI Monitor (Win11 桌面小组件)
 
-A lightweight, transparent, always-on-top desktop widget for Windows 11 to monitor your [NewAPI](https://github.com/QuantumNous/new-api) / OneAPI usage and balance in real-time.
+一个轻量级、透明、置顶的 Windows 11 桌面小组件，用于实时监控你的 [NewAPI](https://github.com/QuantumNous/new-api) / OneAPI 使用量和余额。
 
-Built with **Tauri v2**, **React**, and **Rust**.
+使用 **Tauri v2**、**React** 和 **Rust** 构建。
 
-## ✨ Features
+## ✨ 功能特性
 
-*   **Win11 Native Look**: Acrylic/Mica effect, rounded corners, and shadow.
-*   **Always-on-Top**: Floats over other windows for quick glancing.
-*   **Multi-Site Support**: Monitor multiple API providers simultaneously.
-*   **Auto-Carousel**: Automatically rotates between different sites every 5 seconds.
-*   **Precise Tracking**:
-    *   **Today's Usage**: Tracks usage from 00:00 to now.
-    *   **Balance**: Shows remaining account balance.
-*   **Secure**: Uses Rust backend for HTTP requests to bypass CORS and browser restrictions, supporting full Cookie/Session based authentication.
-*   **System Tray**: Minimize to tray when not needed.
+*   **Win11 原生外观**：亚克力/云母效果、圆角和阴影。
+*   **始终置顶**：悬浮在其他窗口之上，方便快速查看。
+*   **多站点支持**：同时监控多个 API 提供商。
+*   **自动轮播**：每 5 秒自动切换不同站点。
+*   **精确追踪**：
+    *   **今日用量**：追踪从 00:00 到现在的使用量。
+    *   **余额**：显示账户剩余余额。
+*   **安全**：使用 Rust 后端进行 HTTP 请求，绕过 CORS 和浏览器限制，支持完整的 Cookie/Session 认证。
+*   **系统托盘**：不需要时可最小化到托盘。
 
-## 🚀 Installation
+## 🚀 安装
 
-1.  Download the latest `newapi-monitor.exe` from the [Releases](https://github.com/yourusername/newapi-monitor/releases) page (Coming soon).
-2.  Run the executable.
-3.  Right-click the tray icon to Quit.
+1.  从 [Releases](https://github.com/ThendCN/newapi-monitor/releases) 页面下载最新的 `newapi-monitor.exe`。
+2.  运行可执行文件。
+3.  右键点击托盘图标退出。
 
-## ⚙️ Configuration
+## ⚙️ 配置
 
-1.  Click the **⚙️ (Settings)** button on the widget.
-2.  Click **+ Add Site**.
-3.  Fill in the details:
-    *   **Name**: A display name (e.g., "My API").
-    *   **URL**: The base URL of the NewAPI site (e.g., `https://api.example.com`).
-    *   **Cookie**: Your login cookie (Grab this from your browser's DevTools -> Network -> `api/user/self` request).
-    *   **User ID**: Your numeric User ID (usually found in the same request headers as `new-api-user`).
-4.  Click **Save**.
+1.  点击小组件上的 **⚙️（设置）** 按钮。
+2.  点击 **+ 添加站点**。
+3.  填写详细信息：
+    *   **名称**：显示名称（例如："我的 API"）。
+    *   **URL**：NewAPI 站点的基础 URL（例如：`https://api.example.com`）。
+    *   **Cookie**：你的登录 cookie（从浏览器的开发者工具 -> 网络 -> `api/user/self` 请求中获取）。
+    *   **用户 ID**：你的数字用户 ID（通常在同一请求头中找到，名为 `new-api-user`）。
+4.  点击 **保存**。
 
-## 🛠️ Development
+## 🛠️ 开发
 
-### Prerequisites
+### 前置要求
 *   Node.js (v18+)
-*   Rust (Stable)
-*   Visual Studio C++ Build Tools (Windows)
+*   Rust (稳定版)
+*   Visual Studio C++ 构建工具 (Windows)
 
-### Setup
+### 设置
 ```bash
-git clone https://github.com/yourusername/newapi-monitor.git
+git clone https://github.com/ThendCN/newapi-monitor.git
 cd newapi-monitor
 npm install
 ```
 
-### Run in Development Mode
+### 开发模式运行
 ```bash
 npm run tauri dev
 ```
 
-### Build for Production
+### 生产构建
 ```bash
 npm run tauri build
 ```
-The output executable will be at `src-tauri/target/release/newapi-monitor.exe`.
+输出的可执行文件位于 `src-tauri/target/release/newapi-monitor.exe`。
 
-## 📄 License
+## 📄 许可证
 
 MIT
